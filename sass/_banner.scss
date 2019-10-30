@@ -5,7 +5,7 @@
         padding-left: 0px;
     }
     .banner_post_bg_1{
-        @include background("");
+        @include background("banner_blog_1,jpg");
     }
     .banner_post_bg_2{
         @include background("");
