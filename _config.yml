@@ -12,7 +12,7 @@ picture: assets/images/profile.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-#resume:false
+resume: false
 # resume-external:false 
 #resume-url: https://google.com/?q=my+resume
 
@@ -38,10 +38,10 @@ disqus:
 # twitter: mytwitter
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin:eshaangandhi 
+linkedin: eshaangandhi 
 # youtube: myyoutube
 spotify: eshaang2000
-github:eshaang2000
+github: eshaang2000
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
@@ -50,13 +50,13 @@ github:eshaang2000
 # medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email:eshaang2000@gmail.com
+email: eshaang2000@gmail.com
 
 authors:
   eshaangandhi:
-    name:Eshaan Gandhi
-    bio:Rutgers CS
-    external-image:true
+    name: Eshaan Gandhi
+    bio: Rutgers CS
+    external-image: true
     picture: assets/images/profile.jpg
     # twitter: johndoe
 # do you want a larger site? change the option below
