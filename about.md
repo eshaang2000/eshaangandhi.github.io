@@ -20,11 +20,11 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>Java</l1>
-	<li>C</l1>
-	<li>Python</l1>
-	<li>Git</l1>
-	<li>LaTeX</l1>
+	<li>Java</li>
+	<li>C</li>
+	<li>Python</li>
+	<li>Git</li>
+	<li>LaTeX</li>
 	<!-- <li>HTML - Jade - Haml - Erb</li>
 	<li>Responsive (Mobile First)</li>
 	<li>CSS (Stylus, Sass, Less)</li>
