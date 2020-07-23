@@ -1,0 +1,18 @@
+---
+title: "Couch to 5K"
+layout: post
+# date: 2016-02-24 22:48
+# image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- C25K
+- Fitness
+- Running
+category: blog
+author: EshaanGandhi
+description: Start of my couch to 5k journey
+---
+
+# I Really Dislike Running
+
+Well I don't know the reason. It might be because it can be just too hard. So, I never really understood the need to run. I could do other forms of excerice. Then the covid 19 pandemic hit. I was left without a gym or weights to use. This is now forcing me to run to maintain (honestly, to rebuild) cardiovascular fitness. I tried running but just did not have a plan of what to do. After searching for an effective plan, I decided to give Couch to 5k a try. Now let's see how that goes. 
