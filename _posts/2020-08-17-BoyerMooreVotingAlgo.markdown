@@ -1,14 +1,14 @@
 ---
 title: "Boyer–Moore Majority Vote Algorithm"
 layout: post
-date: 08-17-2020
-headerImage: false
+date: 2020-08-17
+#headerImage: false
 tag:
--Algorithms
--Coding
+- Algorithms
+- Coding
 star: true
 category: blog
-author: eshaan 
+author: EshaanGandhi 
 description: "Pretty cool algorithm"
 ---
 Let's get straight into it. The problem that I came across was as follows:
@@ -54,4 +54,3 @@ class Solution {
     }
 }
 ~~~
-

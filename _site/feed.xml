@@ -1,1 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-23T05:36:34-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eshaan Gandhi</title><subtitle>A blog about my notes, and stuff I find interesting.</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-17T07:18:32-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eshaan Gandhi</title><subtitle>A blog about my notes, and stuff I find interesting.</subtitle><entry><title type="html"></title><link href="http://localhost:4000/2020-08-03-Probability/" rel="alternate" type="text/html" title="" /><published>2020-08-17T07:18:32-04:00</published><updated>2020-08-17T07:18:32-04:00</updated><id>http://localhost:4000/2020-08-03-Probability</id><content type="html" xml:base="http://localhost:4000/2020-08-03-Probability/">&lt;h1 id=&quot;probability&quot;&gt;Probability&lt;/h1&gt;
+
+&lt;p&gt;During Fall 2020, I saw one of my friends take a “probability” quiz for some trading position. I thought the questions were pretty nice. Then I took an actual probability class at school. It was fun and hard at the same time. Here I will compile a list of all probability problems that I found interesting.&lt;/p&gt;
+
+&lt;p&gt;So let’s dive right in:&lt;/p&gt;
+
+&lt;p&gt;This one is not really probability but still interesting and fun. 
+Q. A horizontal stick is one metre long. Fifty ants are placed in random positions on the stick, pointing in random directions. The ants crawl head first along the stick, moving at one metre per minute. If an ant reaches the end of the stick, it falls off. If two ants meet, they both change direction. How long do you have to wait to be sure that all the ants have fallen off the stick?&lt;/p&gt;
+
+&lt;p&gt;A. Super sun question like I said. Le&lt;/p&gt;</content><author><name></name></author></entry><entry><title type="html">Boyer–Moore Majority Vote Algorithm</title><link href="http://localhost:4000/BoyerMooreVotingAlgo/" rel="alternate" type="text/html" title="Boyer–Moore Majority Vote Algorithm" /><published>2020-08-17T00:00:00-04:00</published><updated>2020-08-17T00:00:00-04:00</updated><id>http://localhost:4000/BoyerMooreVotingAlgo</id><content type="html" xml:base="http://localhost:4000/BoyerMooreVotingAlgo/">&lt;p&gt;Let’s get straight into it. The problem that I came across was as follows:&lt;/p&gt;
+
+&lt;p&gt;Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the majority element always exist in the array.&lt;/p&gt;
+
+&lt;p&gt;To understand the problem better imagine that an area is conducting an election where for a candidate to win, they have to get more that 50% of the votes. Each candidate is given a numberical id and every time someone votes for the candidate we add the id to the array. So if the array is [7, 7, 9, 10] someone came in voted for candidate number 7, then someone else came in voted for 7 again. Then someone else came in and voted for candidate number 9. So and so forth we populate the array. Since there are going to be a lot of votes we need to find a quick way to get the majority element. This is where this algorithm shines.&lt;/p&gt;
+
+&lt;p&gt;Basically we want to see if there is one over powering element like in an election. One number vs all the numbers in the array.&lt;/p&gt;
+
+&lt;p&gt;Let the array be
+[7, 3, 7, 9, 7, 6, 7, 7, 7, 8, 9]&lt;/p&gt;
+
+&lt;p&gt;The length of this array is 11 and there are 6 ‘7’ elements. This makes the desired answer as 7.&lt;/p&gt;
+
+&lt;p&gt;The algorihtm basically divides and kills the array. For eg:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[7, 3,&lt;/td&gt;
+      &lt;td&gt;7, 9,&lt;/td&gt;
+      &lt;td&gt;7, 6,&lt;/td&gt;
+      &lt;td&gt;7, 7, 7, 8, 9]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Let’s look at the first block: [7, 3] - if this section of the array was disregarded from the array, it would make no difference to the election, because the both ‘cancel’ each other. So let’s look at the code for this algorithm&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;majorityElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contender&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++){&lt;/span&gt;
+            
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;contender&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]){&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>EshaanGandhi</name></author><category term="blog" /><category term="Algorithms" /><category term="Coding" /><summary type="html">Let’s get straight into it. The problem that I came across was as follows:</summary></entry><entry><title type="html">Couch to 5K</title><link href="http://localhost:4000/Couch25K/" rel="alternate" type="text/html" title="Couch to 5K" /><published>2020-07-23T00:00:00-04:00</published><updated>2020-07-23T00:00:00-04:00</updated><id>http://localhost:4000/Couch25K</id><content type="html" xml:base="http://localhost:4000/Couch25K/">&lt;h1 id=&quot;i-really-dislike-running&quot;&gt;I Really Dislike Running&lt;/h1&gt;
+
+&lt;p&gt;Well I don’t know the reason. It might be because it can be just too hard. So, I never really understood the need to run. I could do other forms of excerice. Then the covid 19 pandemic hit. I was left without a gym or weights to use. This is now forcing me to run to maintain (honestly, to rebuild) cardiovascular fitness. I tried running but just did not have a plan of what to do. After searching for an effective plan, I decided to give Couch to 5k a try. Now let’s see how that goes.&lt;/p&gt;</content><author><name>EshaanGandhi</name></author><category term="blog" /><category term="C25K" /><category term="Fitness" /><category term="Running" /><summary type="html">I Really Dislike Running</summary></entry></feed>
