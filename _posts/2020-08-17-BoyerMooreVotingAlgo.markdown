@@ -6,7 +6,7 @@ date: 2020-08-17
 tag:
 - Algorithms
 - Coding
-star: true
+star: false
 category: blog
 author: EshaanGandhi 
 description: "Pretty cool algorithm"
