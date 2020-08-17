@@ -54,3 +54,7 @@ class Solution {
     }
 }
 ~~~
+
+You can find the problem on leetcode - <https://leetcode.com/problems/majority-element/>
+
+Now the complexity analysis: We only went through the array once so this would be O(n) time.
