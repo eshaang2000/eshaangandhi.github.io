@@ -542,16 +542,7 @@ You may assume that the array is non-empty and the majority element always exist
 
 <p>The algorihtm basically divides and kills the array. For eg:</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>[7, 3,</td>
-      <td>7, 9,</td>
-      <td>7, 6,</td>
-      <td>7, 7, 7, 8, 9]</td>
-    </tr>
-  </tbody>
-</table>
+<p>[7, 3] [7, 9] [7, 6] [7, 7, 7, 8, 9]</p>
 
 <p>Let’s look at the first block: [7, 3] - if this section of the array was disregarded from the array, it would make no difference to the election, because the both ‘cancel’ each other. So let’s look at the code for this algorithm</p>
 
@@ -578,14 +569,16 @@ You may assume that the array is non-empty and the majority element always exist
 <span class="o">}</span>
 </code></pre></div></div>
 
+<p>You can find the problem on leetcode - <a href="https://leetcode.com/problems/majority-element/">https://leetcode.com/problems/majority-element/</a></p>
+
+<p>Now the complexity analysis: We only went through the array once so this would be O(n) time.</p>
+
 
 
     <div class="blog-navigation">
         
             <a class="prev" href="http://localhost:4000/Couch25K/">&laquo; Couch to 5K</a>
         
-        
-            <a class="next" href="http://localhost:4000/2020-08-03-Probability/"> &raquo;</a>
         
     </div>
 
@@ -596,9 +589,6 @@ You may assume that the array is non-empty and the majority element always exist
     
         
         
-    
-        
-        
             
                 
             
@@ -625,6 +615,15 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
+        
+            
+                
+            
+                
+            
+        
+    
+        
         
             
                 

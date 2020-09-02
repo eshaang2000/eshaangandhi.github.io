@@ -1,0 +1,24 @@
+---
+title: "The Ant Problem"
+layout: post
+date: 08-03-2020
+headerImage: false
+tag: Math
+star: true
+category: blog
+author: eshaan 
+description: "Liked a Trading Interview Problem"
+---
+
+# Trading Interview Problem
+
+<!-- During Fall 2020, I saw one of my friends take a "probability" quiz for some trading position. I thought the questions were pretty nice. Then I took an actual probability class at school. It was fun and hard at the same time. Here I will compile a list of all probability problems that I found interesting. -->
+
+So let's dive right in:
+
+This one is not really probability but still interesting and fun.
+Q. A horizontal stick is one metre long. Fifty ants are placed in random positions on the stick, pointing in random directions. The ants crawl head first along the stick, moving at one metre per minute. If an ant reaches the end of the stick, it falls off. If two ants meet, they both change direction. How long do you have to wait to be sure that all the ants have fallen off the stick?
+
+A. Super fun question like I said. First look at the base case. What is the maximum time an ant would take to fall of the plank if it was the only one on the plank. Since it's a 1 meter plank, at most the ant would take 1 minute to fall off.
+
+Now the collisions: long story short - the collisions dont matter. When two ants collide they switch directions. Assuming that they don't take anytime switching directions, the number of ants moving in either direction remain the same. Since ants are indistinguashable, the "energy" (for lack of a better word) one ant is carrying keeps on going in the same direction and maintains its speed until it falls off.

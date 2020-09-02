@@ -27,7 +27,7 @@ The length of this array is 11 and there are 6 '7' elements. This makes the desi
 
 The algorihtm basically divides and kills the array. For eg:
 
-[7, 3, | 7, 9, | 7, 6, | 7, 7, 7, 8, 9]
+[7, 3] [7, 9] [7, 6] [7, 7, 7, 8, 9]
 
 Let's look at the first block: [7, 3] - if this section of the array was disregarded from the array, it would make no difference to the election, because the both 'cancel' each other. So let's look at the code for this algorithm
 
