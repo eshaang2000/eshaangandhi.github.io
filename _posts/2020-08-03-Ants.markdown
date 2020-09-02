@@ -4,7 +4,7 @@ layout: post
 date: 08-03-2020
 headerImage: false
 tag: Math
-star: true
+star: false
 category: blog
 author: eshaan 
 description: "Liked a Trading Interview Problem"
