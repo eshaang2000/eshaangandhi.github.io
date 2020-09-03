@@ -1,7 +1,7 @@
 ---
 title: "The Ant Problem"
 layout: post
-date: 08-03-2020
+# date: 03-08-2020
 headerImage: false
 tag: Math
 star: false

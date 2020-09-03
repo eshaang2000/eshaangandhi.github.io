@@ -1,7 +1,7 @@
 ---
 title: "Boyer–Moore Majority Vote Algorithm"
 layout: post
-date: 2020-08-17
+# date: 2020-08-17
 #headerImage: false
 tag:
 - Algorithms
