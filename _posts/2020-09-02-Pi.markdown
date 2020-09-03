@@ -1,0 +1,47 @@
+---
+title: "Estimating Pi"
+layout: post
+# date: 2016-02-24 22:48
+# image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- Math
+- Probability
+category: blog
+author: EshaanGandhi
+description: Estimating Pi using MonteCarlo Methods
+---
+Let's say we have to estimate the value of Pi using a random number generator. You can think of a MonteCarlo simulator as throwing a lot of darts at a board.
+
+Now lets say the board was a unit square with a unit quadrant like the following image:
+
+![Dart Board](MonteCarlo.png)
+
+Now we throw a lot of darts onto this board **randomly**. The probability of being inside the quadrant is going the be the $$Area of Quadrant/Area of Square$$. We count the numbers of darts that actually landed inside the quadrant and those that did not. If we run this a lot of times, we get a pretty good estimate of the  probability of the dart landing inside the the quadrant. 
+
+So we now get
+
+$$Number of times dart is inside the quadrant/number of total darts thrown = Area of Quadrant/Area of Square$$
+
+Now we used unit squares and quadrants so Area of Quadrant is $$\pi/4$$ and Area of the Square is 1. So if we just multiply the Probability we got by 4, we get the value of Pi
+
+Here's my python code:
+
+```python
+import random
+inside=0
+outside=0
+x=[]
+y=[]
+for i in range(10000): # We do 10,000 trials
+    x.append(random.random())
+    y.append(random.random())
+    pos=pow(x[i], 2)+pow(y[i], 2) # distance from origin
+    if pos < 1:
+        inside+=1
+    else:
+        outside+=1
+
+probability=inside/(inside+outside)
+print("The Estimated value of pi is: " + str(probability*4))
+```

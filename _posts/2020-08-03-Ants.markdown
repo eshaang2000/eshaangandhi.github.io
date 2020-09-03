@@ -17,6 +17,7 @@ description: "Liked a Trading Interview Problem"
 So let's dive right in:
 
 This one is not really probability but still interesting and fun.
+
 Q. A horizontal stick is one metre long. Fifty ants are placed in random positions on the stick, pointing in random directions. The ants crawl head first along the stick, moving at one metre per minute. If an ant reaches the end of the stick, it falls off. If two ants meet, they both change direction. How long do you have to wait to be sure that all the ants have fallen off the stick?
 
 A. Super fun question like I said. First look at the base case. What is the maximum time an ant would take to fall of the plank if it was the only one on the plank. Since it's a 1 meter plank, at most the ant would take 1 minute to fall off.
