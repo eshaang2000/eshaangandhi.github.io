@@ -9,20 +9,20 @@
     <meta name=author content="Eshaan Gandhi">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Boyer–Moore Majority Vote Algorithm | Eshaan Gandhi</title>
+<title>Calculating the number of walks possible in a Manhattan Lattice | Eshaan Gandhi</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Boyer–Moore Majority Vote Algorithm" />
-<meta name="author" content="EshaanGandhi" />
+<meta property="og:title" content="Calculating the number of walks possible in a Manhattan Lattice" />
+<meta name="author" content="eshaan" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Pretty cool algorithm" />
-<meta property="og:description" content="Pretty cool algorithm" />
-<link rel="canonical" href="http://localhost:4000/BoyerMooreVotingAlgo/" />
-<meta property="og:url" content="http://localhost:4000/BoyerMooreVotingAlgo/" />
+<meta name="description" content="Proof that the number of of walks possible in a manhattan lattice is given by the formula below" />
+<meta property="og:description" content="Proof that the number of of walks possible in a manhattan lattice is given by the formula below" />
+<link rel="canonical" href="http://localhost:4000/WalksProof/" />
+<meta property="og:url" content="http://localhost:4000/WalksProof/" />
 <meta property="og:site_name" content="Eshaan Gandhi" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-08-17T00:00:00-04:00" />
+<meta property="article:published_time" content="2020-09-17T00:00:00-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/BoyerMooreVotingAlgo/","author":{"@type":"Person","name":"EshaanGandhi"},"headline":"Boyer–Moore Majority Vote Algorithm","dateModified":"2020-08-17T00:00:00-04:00","datePublished":"2020-08-17T00:00:00-04:00","description":"Pretty cool algorithm","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/BoyerMooreVotingAlgo/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/WalksProof/","author":{"@type":"Person","name":"eshaan"},"headline":"Calculating the number of walks possible in a Manhattan Lattice","dateModified":"2020-09-17T00:00:00-04:00","datePublished":"2020-09-17T00:00:00-04:00","description":"Proof that the number of of walks possible in a manhattan lattice is given by the formula below","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/WalksProof/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -48,7 +48,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/BoyerMooreVotingAlgo/">
+    <link rel="canonical" href="http://localhost:4000/WalksProof/">
     <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
 
     <style>
@@ -502,15 +502,15 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">Boyer–Moore Majority Vote Algorithm</h1>
+<h1 class="title">Calculating the number of walks possible in a Manhattan Lattice</h1>
 
 <span class="date">
-    <time datetime="17-08-2020">Monday. August 17, 2020</time>
+    <time datetime="17-09-2020">Thursday. September 17, 2020</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        2 mins
+        3 mins
     
 </span>
 
@@ -519,68 +519,213 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="post-tags">
         
-            <a class="item" href="http://localhost:4000/tags/#algorithms">Algorithms</a>
+            <a class="item" href="http://localhost:4000/tags/#math">Math</a>
         
-            <a class="item" href="http://localhost:4000/tags/#coding">Coding</a>
+            <a class="item" href="http://localhost:4000/tags/#combinatorics">Combinatorics</a>
         
     </div>
 
 
-<p>Let’s get straight into it. The problem that I came across was as follows:</p>
+<!-- Math 454 Eshaan Gandhi
 
-<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-You may assume that the array is non-empty and the majority element always exist in the array.</p>
+Problem .We want to prove our conjecture: the numbers of walks in a Manhattan lattice
+(w/o Broadway) from (0,0) to (m,n) is given by the formula(mm+!·nn!)!
 
-<p>To understand the problem better imagine that an area is conducting an election where for a candidate to win, they have to get more that 50% of the votes. Each candidate is given a numberical id and every time someone votes for the candidate we add the id to the array. So if the array is [7, 7, 9, 10] someone came in voted for candidate number 7, then someone else came in voted for 7 again. Then someone else came in and voted for candidate number 9. So and so forth we populate the array. Since there are going to be a lot of votes we need to find a quick way to get the majority element. This is where this algorithm shines.</p>
+```
+Proof.We use the mathematical technique of induction
+Base case (m = 0, n) OR (m, n = 0):
+There is onlyoneway you could walk up from (0,0) to either (m,0) or (0,n)
+Inductive Hypothesis:
+Assume the total number of walks you could make from (0,0) to (m-1, n) is((mm+−n1)!−·1)!n! AND
+Assume the total number of walks you could make from (0,0) to (m, n-1) is ((mm)!+·(nn−−1)!1)!
+Inductive Step: We must show: number of walks from (0,0) to (m,n) is(mm+!·nn!)!
+The number of walks to (m,n) are simply the sum of the walks to (m-1, n) and (m, n-1)
+```
+```
+T he number of walks to(m, n) =
+(m+n−1)!
+(m−1)!·n!
+```
+## +
 
-<p>Basically we want to see if there is one over powering element like in an election. One number vs all the numbers in the array.</p>
+```
+(m+n−1)!
+(m)!·(n−1)!
+= (m+n−1)!·
+```
+## (
 
-<p>Let the array be
-[7, 3, 7, 9, 7, 6, 7, 7, 7, 8, 9]</p>
+## 1
 
-<p>The length of this array is 11 and there are 6 ‘7’ elements. This makes the desired answer as 7.</p>
+```
+(m−1)!·n!
+```
+## +
 
-<p>The algorihtm basically divides and kills the array. For eg:</p>
+## 1
 
-<p>[7, 3] [7, 9] [7, 6] [7, 7, 7, 8, 9]</p>
+```
+m!·(n−1)!
+```
+## )
 
-<p>Let’s look at the first block: [7, 3] - if this section of the array was disregarded from the array, it would make no difference to the election, because the both ‘cancel’ each other. So let’s look at the code for this algorithm</p>
+```
+= (m+n−1)!·
+```
+## (
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">majorityElement</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
-        
-        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">contender</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
-            
-            <span class="k">if</span><span class="o">(</span><span class="n">count</span><span class="o">==</span><span class="mi">0</span><span class="o">){</span>
-                <span class="n">contender</span> <span class="o">=</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-            <span class="o">}</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">contender</span><span class="o">==</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]){</span>
-                <span class="n">count</span><span class="o">++;</span>
-            <span class="o">}</span>
-            <span class="k">else</span><span class="o">{</span>
-                <span class="n">count</span><span class="o">--;</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">contender</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+## 1
 
-<p>You can find the problem on leetcode - <a href="https://leetcode.com/problems/majority-element/">https://leetcode.com/problems/majority-element/</a></p>
+```
+(m−1)!·n·(n−1)!
+```
+## +
 
-<p>Now the complexity analysis: We only went through the array once so this would be O(n) time.</p>
+## 1
+
+```
+m·(m−1)!·(n−1)!
+```
+## )
+
+## ·
+
+## =
+
+```
+(m+n−1)!
+(m−1)!·(n−1)!
+```
+## ·
+
+## (
+
+## 1
+
+```
+n
+```
+## +
+
+## 1
+
+```
+m
+```
+## )
+
+## =
+
+```
+(m+n−1)!
+(m−1)!·(n−1)!
+```
+## ·
+
+## (
+
+```
+m+n
+nm
+```
+## )
+
+## =
+
+```
+(m+n)!
+m!·n!
+This is the desired result. QED
+
+There is a much faster way to do it and that is using Maple, so that’s pretty ridiculous.
+```
+## 1 -->
+
+<p>$$\documentclass[12pt]{article}</p>
+
+<p>\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}</p>
+
+<p>\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\qed}{\hfill$\blacksquare$}
+\let\newproof\proof
+\renewenvironment{proof}{\begin{addmargin}[1em]{0em}\begin{newproof}}{\end{newproof}\end{addmargin}\qed}
+% \newcommand{\expl}[1]{\text{\hfill[#1]}$}</p>
+
+<p>\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}</p>
+
+<p>\begin{document}</p>
+
+<p>% ————————————————————–
+%                         Start here
+% ————————————————————–</p>
+
+<p>\lhead{Math 454}
+\chead{Eshaan Gandhi}
+%\rhead{\today}</p>
+
+<p>% \maketitle</p>
+
+<p>\begin{problem}{} %You can use theorem, proposition, exercise, or reflection here.  Modify x.yz to be whatever number you are proving
+%Delete this text and write theorem statement here. We can draw the sets $\R$, $\Q$, $\I$, $\Z$, and $\N$. Let’s assume our problem was: Prove that: <script type="math/tex">(\forall x \in \N) \left [\sum_{i = 0}^{n}i = \frac{n(n+1)}{2}\right ]</script>
+We want to prove our conjecture: the numbers of walks in a Manhattan lattice (w/o Broadway) from (0,0) to (m,n) is given by the formula ${\frac{(m+n)!}{m!\cdot n!}}$
+\end{problem}</p>
+
+<p>\begin{proof}
+We use the mathematical technique of induction<br />
+%Note 1: The * tells LaTeX not to number the lines.  If you remove the <em>, be sure to remove it below, too.
+%Note 2: Inside the align environment, you do not want to use $-signs.  The reason for this is that this is already a math environment. This is why we have to include \text{} around any text inside the align environment.
+\textbf{Base case (m = 0, n) OR (m, n = 0):} \There is only {\bfseries one} way you could walk up from (0,0) to either (m,0) or (0,n) <br />
+\textbf{Inductive Hypothesis: } \Assume the total number of walks you could make from (0,0) to (m-1, n) is ${\frac{(m+n-1)!}{(m-1)!\cdot n!}}$ AND<br />
+Assume the total number of walks you could make from (0,0) to (m, n-1) is ${\frac{(m+n-1)!}{(m)! \cdot (n-1)!}}$
+\textbf{Inductive Step: } We must show: number of walks from (0,0) to (m,n) is ${\frac{(m+n)!}{m!\cdot n!}}$
+<br />
+The number of walks to (m,n) are simply the sum of the walks to (m-1, n) and (m, n-1) 
+\begin{align</em>}
+The\  number\ of\ walks\ to\ (m,n) &amp;= {\frac{(m+n-1)!}{(m-1)!\cdot n!}} + {\frac{(m+n-1)!}{(m)!\cdot (n-1)!}}<br />
+&amp;=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n!}+\frac{1}{m!\cdot (n-1)!} \right)<br />
+&amp;=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n \cdot (n-1)!}+\frac{1}{m\cdot (m-1)!\cdot (n-1)!} \right)\cdot <br />
+&amp;=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{1}{n}+\frac{1}{m}\right)<br />
+&amp;=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{m+n}{nm}\right)<br />
+&amp;=\frac{(m+n)!}{m!\cdot n!}
+\end{align*}
+This is the desired result. QED</p>
+
+<p>\end{proof}</p>
+
+<p>There is a much faster way to do it and that is using Maple, so that’s pretty ridiculous. 
+% ————————————————————–
+%     You don’t have to mess with anything below this line.
+% ————————————————————–</p>
+
+<p>\end{document}$$</p>
+
 
 
 
     <div class="blog-navigation">
         
-            <a class="prev" href="http://localhost:4000/Ants/">&laquo; The Ant Problem</a>
+            <a class="prev" href="http://localhost:4000/Derangements/">&laquo; Probably My Greatest Snippet of Code</a>
         
-        
-            <a class="next" href="http://localhost:4000/Pi/">Estimating Pi &raquo;</a>
         
     </div>
 
@@ -608,6 +753,42 @@ You may assume that the array is non-empty and the majority element always exist
         
             
                 
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Derangements/">Probably My Greatest Snippet of Code
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Pi/">Estimating Pi
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+            
+                
             
                 
             
@@ -632,20 +813,14 @@ You may assume that the array is non-empty and the majority element always exist
         
             
                 
-            
-                
-            
-        
-            
-                
-            
-                
-            
-        
-    
-        
-        
-            
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Ants/">The Ant Problem
+                        
+                        </a>
+                    </li>
+                    
+                    
                 
             
                 
@@ -673,6 +848,8 @@ You may assume that the array is non-empty and the majority element always exist
             
         
     
+    
+        </ul>
     
 </div>
 
@@ -697,7 +874,7 @@ You may assume that the array is non-empty and the majority element always exist
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=http://localhost:4000/BoyerMooreVotingAlgo/ - Boyer–Moore Majority Vote Algorithm by @"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/WalksProof/ - Calculating the number of walks possible in a Manhattan Lattice by @"
             >
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use></svg
@@ -714,11 +891,11 @@ You may assume that the array is non-empty and the majority element always exist
                 ><span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/BoyerMooreVotingAlgo/&amp;title=Boyer–Moore Majority Vote Algorithm&amp;summary=Pretty cool algorithm&amp;source=http://localhost:4000" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/WalksProof/&amp;title=Calculating the number of walks possible in a Manhattan Lattice&amp;summary=Proof that the number of of walks possible in a manhattan lattice is given by the formula below&amp;source=http://localhost:4000" target="_blank">
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
             </a> -->
 
-            <!-- <a class="reddit" href="https://reddit.com/submit?url=http://localhost:4000/BoyerMooreVotingAlgo/&amp;title=Boyer–Moore Majority Vote Algorithm" target="_blank">
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=http://localhost:4000/WalksProof/&amp;title=Calculating the number of walks possible in a Manhattan Lattice" target="_blank">
                 <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
             </a> -->
         </div>

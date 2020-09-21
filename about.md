@@ -44,7 +44,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://github.com/">LaTeX Resume Template</a></li>
+	<li><a href="https://github.com/Resume-Eshaan">LaTeX Resume Template</a></li>
 	<!-- <li><a href="https://github.com/">Ipsum Dolor</a></li>
 	<li><a href="https://github.com/">Dolor Lorem</a></li> -->
 </ul>

@@ -1,0 +1,33 @@
+<p>Let’s say we have to estimate the value of Pi using a random number generator. You can think of a MonteCarlo simulator as throwing a lot of darts at a board.</p>
+
+<p>Now lets say the board was a unit square with a unit quadrant like the following image:</p>
+
+<p><img src="MonteCarlo.png" alt="Dart Board" /></p>
+
+<p>Now we throw a lot of darts onto this board <strong>randomly</strong>. The probability of being inside the quadrant is going the be the <script type="math/tex">Area of Quadrant/Area of Square</script>. We count the numbers of darts that actually landed inside the quadrant and those that did not. If we run this a lot of times, we get a pretty good estimate of the  probability of the dart landing inside the the quadrant.</p>
+
+<p>So we now get</p>
+
+<script type="math/tex; mode=display">Number of times dart is inside the quadrant/number of total darts thrown = Area of Quadrant/Area of Square</script>
+
+<p>Now we used unit squares and quadrants so Area of Quadrant is <script type="math/tex">\pi/4</script> and Area of the Square is 1. So if we just multiply the Probability we got by 4, we get the value of Pi</p>
+
+<p>Here’s my python code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">inside</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">outside</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">x</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span> <span class="c1"># We do 10,000 trials
+</span>    <span class="n">x</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">())</span>
+    <span class="n">y</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">())</span>
+    <span class="n">pos</span><span class="o">=</span><span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># distance from origin
+</span>    <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">inside</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">outside</span><span class="o">+=</span><span class="mi">1</span>
+
+<span class="n">probability</span><span class="o">=</span><span class="n">inside</span><span class="o">/</span><span class="p">(</span><span class="n">inside</span><span class="o">+</span><span class="n">outside</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The Estimated value of pi is: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">probability</span><span class="o">*</span><span class="mi">4</span><span class="p">))</span>
+</code></pre></div></div>

@@ -17,13 +17,13 @@ Now lets say the board was a unit square with a unit quadrant like the following
 
 ![Dart Board](MonteCarlo.png)
 
-Now we throw a lot of darts onto this board **randomly**. The probability of being inside the quadrant is going the be the $$Area of Quadrant/Area of Square$$. We count the numbers of darts that actually landed inside the quadrant and those that did not. If we run this a lot of times, we get a pretty good estimate of the  probability of the dart landing inside the the quadrant. 
+Now we throw a lot of darts onto this board **randomly**. The probability of being inside the quadrant is going the be the $$Area of Quadrant/Area of Square$$. We count the numbers of darts that actually landed inside the quadrant and those that did not. If we run this a lot of times, we get a pretty good estimate of the  probability of the dart landing inside the the quadrant.
 
 So we now get
 
-$$Number of times dart is inside the quadrant/number of total darts thrown = Area of Quadrant/Area of Square$$
+$$\frac{Number of times dart is inside the quadrant}{number of total darts thrown} = \frac{Area of Quadrant}{Area of Square}$$
 
-Now we used unit squares and quadrants so Area of Quadrant is $$\pi/4$$ and Area of the Square is 1. So if we just multiply the Probability we got by 4, we get the value of Pi
+Now we used unit squares and quadrants so Area of Quadrant is $$\frac{\Pi}{4}$$ and Area of the Square is 1. So if we just multiply the Probability we got by 4, we get the value of Pi
 
 Here's my python code:
 
