@@ -641,14 +641,21 @@ There is a much faster way to do it and that is using Maple, so that’s pretty 
 ```
 ## 1 -->
 
-<p>$$\documentclass[12pt]{article}</p>
+<h2 id="i-have-no-clue-how-to-compile-latex-in-markdown">I have no clue how to compile LaTeX in markdown</h2>
 
-<p>\usepackage[margin=1in]{geometry} 
+<p>so I have another site where I post my LaTeX stuff. checkout gandhieshaan.me</p>
+
+<p><img src="/assets/walksProof-1.png" alt="Proof" /></p>
+
+<!-- $$\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,scrextend}
 \usepackage{fancyhdr}
-\pagestyle{fancy}</p>
+\pagestyle{fancy}
 
-<p>\newcommand{\N}{\mathbb{N}}
+ 
+\newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\I}{\mathbb{I}}
 \newcommand{\R}{\mathbb{R}}
@@ -656,9 +663,9 @@ There is a much faster way to do it and that is using Maple, so that’s pretty 
 \renewcommand{\qed}{\hfill$\blacksquare$}
 \let\newproof\proof
 \renewenvironment{proof}{\begin{addmargin}[1em]{0em}\begin{newproof}}{\end{newproof}\end{addmargin}\qed}
-% \newcommand{\expl}[1]{\text{\hfill[#1]}$}</p>
-
-<p>\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+% \newcommand{\expl}[1]{\text{\hfill[#1]}$}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{lemma}[2][Lemma]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
@@ -671,53 +678,53 @@ There is a much faster way to do it and that is using Maple, so that’s pretty 
 \newenvironment{proposition}[2][Proposition]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}</p>
-
-<p>\begin{document}</p>
-
-<p>% ————————————————————–
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
 %                         Start here
-% ————————————————————–</p>
+% --------------------------------------------------------------
 
-<p>\lhead{Math 454}
+\lhead{Math 454}
 \chead{Eshaan Gandhi}
-%\rhead{\today}</p>
-
-<p>% \maketitle</p>
-
-<p>\begin{problem}{} %You can use theorem, proposition, exercise, or reflection here.  Modify x.yz to be whatever number you are proving
-%Delete this text and write theorem statement here. We can draw the sets $\R$, $\Q$, $\I$, $\Z$, and $\N$. Let’s assume our problem was: Prove that: <script type="math/tex">(\forall x \in \N) \left [\sum_{i = 0}^{n}i = \frac{n(n+1)}{2}\right ]</script>
+%\rhead{\today}
+ 
+% \maketitle
+ 
+\begin{problem}{} %You can use theorem, proposition, exercise, or reflection here.  Modify x.yz to be whatever number you are proving
+%Delete this text and write theorem statement here. We can draw the sets $\R$, $\Q$, $\I$, $\Z$, and $\N$. Let's assume our problem was: Prove that: $$(\forall x \in \N) \left [\sum_{i = 0}^{n}i = \frac{n(n+1)}{2}\right ]$$
 We want to prove our conjecture: the numbers of walks in a Manhattan lattice (w/o Broadway) from (0,0) to (m,n) is given by the formula ${\frac{(m+n)!}{m!\cdot n!}}$
-\end{problem}</p>
-
-<p>\begin{proof}
-We use the mathematical technique of induction<br />
-%Note 1: The * tells LaTeX not to number the lines.  If you remove the <em>, be sure to remove it below, too.
+\end{problem}
+ 
+\begin{proof}
+We use the mathematical technique of induction\\
+%Note 1: The * tells LaTeX not to number the lines.  If you remove the *, be sure to remove it below, too.
 %Note 2: Inside the align environment, you do not want to use $-signs.  The reason for this is that this is already a math environment. This is why we have to include \text{} around any text inside the align environment.
-\textbf{Base case (m = 0, n) OR (m, n = 0):} \There is only {\bfseries one} way you could walk up from (0,0) to either (m,0) or (0,n) <br />
-\textbf{Inductive Hypothesis: } \Assume the total number of walks you could make from (0,0) to (m-1, n) is ${\frac{(m+n-1)!}{(m-1)!\cdot n!}}$ AND<br />
+\textbf{Base case (m = 0, n) OR (m, n = 0):} \\There is only {\bfseries one} way you could walk up from (0,0) to either (m,0) or (0,n) \\
+\textbf{Inductive Hypothesis: } \\Assume the total number of walks you could make from (0,0) to (m-1, n) is ${\frac{(m+n-1)!}{(m-1)!\cdot n!}}$ AND\\
 Assume the total number of walks you could make from (0,0) to (m, n-1) is ${\frac{(m+n-1)!}{(m)! \cdot (n-1)!}}$
 \textbf{Inductive Step: } We must show: number of walks from (0,0) to (m,n) is ${\frac{(m+n)!}{m!\cdot n!}}$
-<br />
+\\
 The number of walks to (m,n) are simply the sum of the walks to (m-1, n) and (m, n-1) 
-\begin{align</em>}
-The\  number\ of\ walks\ to\ (m,n) &amp;= {\frac{(m+n-1)!}{(m-1)!\cdot n!}} + {\frac{(m+n-1)!}{(m)!\cdot (n-1)!}}<br />
-&amp;=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n!}+\frac{1}{m!\cdot (n-1)!} \right)<br />
-&amp;=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n \cdot (n-1)!}+\frac{1}{m\cdot (m-1)!\cdot (n-1)!} \right)\cdot <br />
-&amp;=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{1}{n}+\frac{1}{m}\right)<br />
-&amp;=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{m+n}{nm}\right)<br />
-&amp;=\frac{(m+n)!}{m!\cdot n!}
+\begin{align*}
+The\  number\ of\ walks\ to\ (m,n) &= {\frac{(m+n-1)!}{(m-1)!\cdot n!}} + {\frac{(m+n-1)!}{(m)!\cdot (n-1)!}}\\
+&=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n!}+\frac{1}{m!\cdot (n-1)!} \right)\\
+&=(m+n-1)!\cdot \left( \frac{1}{(m-1)!\cdot n \cdot (n-1)!}+\frac{1}{m\cdot (m-1)!\cdot (n-1)!} \right)\cdot \\
+&=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{1}{n}+\frac{1}{m}\right)\\
+&=\frac{(m+n-1)!}{(m-1)!\cdot (n-1)!}\cdot \left(\frac{m+n}{nm}\right)\\
+&=\frac{(m+n)!}{m!\cdot n!}
 \end{align*}
-This is the desired result. QED</p>
+This is the desired result. QED
 
-<p>\end{proof}</p>
+\end{proof}
 
-<p>There is a much faster way to do it and that is using Maple, so that’s pretty ridiculous. 
-% ————————————————————–
-%     You don’t have to mess with anything below this line.
-% ————————————————————–</p>
-
-<p>\end{document}$$</p>
+There is a much faster way to do it and that is using Maple, so that's pretty ridiculous. 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}$$ -->
 
 
 

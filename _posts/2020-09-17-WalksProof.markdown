@@ -5,7 +5,6 @@ headerImage: false
 tag:
 - Math
 - Combinatorics
-star: true
 category: blog
 author: eshaan 
 description: Proof that the number of of walks possible in a manhattan lattice is given by the formula below
@@ -126,7 +125,14 @@ There is a much faster way to do it and that is using Maple, so that’s pretty 
 ```
 ## 1 -->
 
-$$\documentclass[12pt]{article}
+## I have no clue how to compile LaTeX in markdown 
+
+so I have another site where I post my LaTeX stuff. checkout gandhieshaan.me
+
+
+![Proof](/assets/walksProof-1.png)
+
+<!-- $$\documentclass[12pt]{article}
  
 \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,scrextend}
@@ -203,7 +209,7 @@ There is a much faster way to do it and that is using Maple, so that's pretty ri
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
  
-\end{document}$$
+\end{document}$$ -->
 
 
 

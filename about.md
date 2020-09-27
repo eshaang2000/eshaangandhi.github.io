@@ -45,6 +45,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 
 <ul>
 	<li><a href="https://github.com/Resume-Eshaan">LaTeX Resume Template</a></li>
-	<!-- <li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li> -->
+	<li><a href="https://github.com/Rowing">Rowing Workout Analyzer</a></li> - Currently building
+	<li><a href="https://github.com/BreastCancerClassification">Breast Cancer Classification Neural Net</a></li>
 </ul>
