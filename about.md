@@ -44,7 +44,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://github.com/Resume-Eshaan">LaTeX Resume Template</a></li>
-	<li><a href="https://github.com/Rowing">Rowing Workout Analyzer</a></li> - Currently building
-	<li><a href="https://github.com/BreastCancerClassification">Breast Cancer Classification Neural Net</a></li>
+	<li><a href="https://github.com/eshaang2000/Resume-Eshaan">LaTeX Resume Template</a></li>
+	<li><a href="https://github.com/eshaang2000/Rowing">Rowing Workout Analyzer</a></li> - Currently building
+	<li><a href="https://github.com/eshaang2000/BreastCancerClassification">Breast Cancer Classification Neural Net</a></li>
 </ul>

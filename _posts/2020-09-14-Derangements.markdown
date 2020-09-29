@@ -4,7 +4,7 @@ layout: post
 headerImage: false
 tag:
 - Math
-star: true
+star: false
 category: blog
 author: eshaan 
 description: "Maple code to to calculate the number of derangements"
