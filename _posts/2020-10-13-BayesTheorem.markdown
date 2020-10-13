@@ -19,3 +19,5 @@ Let's talk about sports? What does it mean that the Lakers have a 60% chance to 
 I would say that to test if someone's belief is true, one must be willing to bet if they were given odds according to the probability they gave us. If they are not, then you should probably not listen to them. I mean, definitely not listen to them. The likelihood of an event happening depends on the amount of information you have. For the same event, if you have a lot of info (likely not going to happen), you can arrive at a more precise probability. While if you have no information (most likely how things happen in life - like in poker), you will not be able to come up with a precise probability.
 
 Fascinating problem - how we can make the best decisions with limited information.
+
+*Like a woman, a computer has beauty, grace, and speed, so it's referred to as "she"
