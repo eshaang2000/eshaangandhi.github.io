@@ -9,20 +9,20 @@
     <meta name=author content="Eshaan Gandhi">
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Boyer–Moore Majority Vote Algorithm | Eshaan Gandhi</title>
+<title>Bayesian Probability | Eshaan Gandhi</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Boyer–Moore Majority Vote Algorithm" />
-<meta name="author" content="EshaanGandhi" />
+<meta property="og:title" content="Bayesian Probability" />
+<meta name="author" content="eshaan" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Pretty cool algorithm" />
-<meta property="og:description" content="Pretty cool algorithm" />
-<link rel="canonical" href="http://localhost:4000/BoyerMooreVotingAlgo/" />
-<meta property="og:url" content="http://localhost:4000/BoyerMooreVotingAlgo/" />
+<meta name="description" content="Probability is subjective??" />
+<meta property="og:description" content="Probability is subjective??" />
+<link rel="canonical" href="http://localhost:4000/BayesTheorem/" />
+<meta property="og:url" content="http://localhost:4000/BayesTheorem/" />
 <meta property="og:site_name" content="Eshaan Gandhi" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-08-17T00:00:00-04:00" />
+<meta property="article:published_time" content="2020-10-13T00:00:00-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/BoyerMooreVotingAlgo/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/BoyerMooreVotingAlgo/"},"author":{"@type":"Person","name":"EshaanGandhi"},"headline":"Boyer–Moore Majority Vote Algorithm","dateModified":"2020-08-17T00:00:00-04:00","datePublished":"2020-08-17T00:00:00-04:00","description":"Pretty cool algorithm","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/BayesTheorem/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/BayesTheorem/"},"author":{"@type":"Person","name":"eshaan"},"headline":"Bayesian Probability","dateModified":"2020-10-13T00:00:00-04:00","datePublished":"2020-10-13T00:00:00-04:00","description":"Probability is subjective??","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -48,7 +48,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/BoyerMooreVotingAlgo/">
+    <link rel="canonical" href="http://localhost:4000/BayesTheorem/">
     <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
 
     <style>
@@ -492,15 +492,15 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">Boyer–Moore Majority Vote Algorithm</h1>
+<h1 class="title">Bayesian Probability</h1>
 
 <span class="date">
-    <time datetime="17-08-2020">Monday. August 17, 2020</time>
+    <time datetime="13-10-2020">Tuesday. October 13, 2020</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        2 mins
+        1 min
     
 </span>
 
@@ -509,68 +509,29 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="post-tags">
         
-            <a class="item" href="http://localhost:4000/tags/#algorithms">Algorithms</a>
+            <a class="item" href="http://localhost:4000/tags/#probability">Probability</a>
         
-            <a class="item" href="http://localhost:4000/tags/#coding">Coding</a>
+            <a class="item" href="http://localhost:4000/tags/#math">Math</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#philosophy">Philosophy</a>
         
     </div>
 
 
-<p>Let’s get straight into it. The problem that I came across was as follows:</p>
+<p>Is probability subjective? For example, let’s say I flip a coin, and I ask you to guess how it landed. You say tails, and I show it to you as heads. We go again, and it heads also. We go again and again. We go 100 times, and it’s heads every single time. Well, do you still believe that the next flip is going to be tails? Theoretically, it should be 1/2 or 50%, but is it? Even a six-year-old kid would catch on and say that there is a 100% chance that the next flip is going to be heads. On the other hand, a computer that is fundamentally objective is going to say that it is a 50% chance. Is she* right?? Hell no!</p>
 
-<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-You may assume that the array is non-empty and the majority element always exist in the array.</p>
+<p>Let’s talk about sports? What does it mean that the Lakers have a 60% chance to win the NBA. Well, how do you quantify that? Do you count up all the points and rate them accordingly? Do you look at previous wins and come up with the number? Or is it just intuition? One of my friends said that every event is  50-50, it happens or it does not. I’m pretty sure that it was as a joke, but I unironically said that to a probability professor, and I got utterly flamed, so I refrain from making judgments.</p>
 
-<p>To understand the problem better imagine that an area is conducting an election where for a candidate to win, they have to get more that 50% of the votes. Each candidate is given a numberical id and every time someone votes for the candidate we add the id to the array. So if the array is [7, 7, 9, 10] someone came in voted for candidate number 7, then someone else came in voted for 7 again. Then someone else came in and voted for candidate number 9. So and so forth we populate the array. Since there are going to be a lot of votes we need to find a quick way to get the majority element. This is where this algorithm shines.</p>
+<p>I would say that to test if someone’s belief is true, one must be willing to bet if they were given odds according to the probability they gave us. If they are not, then you should probably not listen to them. I mean, definitely not listen to them. The likelihood of an event happening depends on the amount of information you have. For the same event, if you have a lot of info (likely not going to happen), you can arrive at a more precise probability. While if you have no information (most likely how things happen in life - like in poker), you will not be able to come up with a precise probability.</p>
 
-<p>Basically we want to see if there is one over powering element like in an election. One number vs all the numbers in the array.</p>
-
-<p>Let the array be
-[7, 3, 7, 9, 7, 6, 7, 7, 7, 8, 9]</p>
-
-<p>The length of this array is 11 and there are 6 ‘7’ elements. This makes the desired answer as 7.</p>
-
-<p>The algorihtm basically divides and kills the array. For eg:</p>
-
-<p>[7, 3] [7, 9] [7, 6] [7, 7, 7, 8, 9]</p>
-
-<p>Let’s look at the first block: [7, 3] - if this section of the array was disregarded from the array, it would make no difference to the election, because the both ‘cancel’ each other. So let’s look at the code for this algorithm</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">majorityElement</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
-        
-        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">contender</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
-            
-            <span class="k">if</span><span class="o">(</span><span class="n">count</span><span class="o">==</span><span class="mi">0</span><span class="o">){</span>
-                <span class="n">contender</span> <span class="o">=</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-            <span class="o">}</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">contender</span><span class="o">==</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]){</span>
-                <span class="n">count</span><span class="o">++;</span>
-            <span class="o">}</span>
-            <span class="k">else</span><span class="o">{</span>
-                <span class="n">count</span><span class="o">--;</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">contender</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>You can find the problem on leetcode - <a href="https://leetcode.com/problems/majority-element/">https://leetcode.com/problems/majority-element/</a></p>
-
-<p>Now the complexity analysis: We only went through the array once so this would be O(n) time.</p>
+<p>Fascinating problem - how we can make the best decisions with limited information.</p>
 
 
 
     <div class="blog-navigation">
         
-            <a class="prev" href="http://localhost:4000/Ants/">&laquo; The Ant Problem</a>
+            <a class="prev" href="http://localhost:4000/ThePartyNeverStops/">&laquo; The Party Never Stops</a>
         
-        
-            <a class="next" href="http://localhost:4000/Pi/">Estimating Pi &raquo;</a>
         
     </div>
 
@@ -586,10 +547,6 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
-        
-            
-                
-            
                 
             
         
@@ -598,16 +555,11 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
-        
-    
-        
-        
-            
-                
-            
                 
             
         
+            
+                
             
                 
             
@@ -622,13 +574,135 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
+                
+            
         
             
                 
             
                 
             
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/ThePartyNeverStops/">The Party Never Stops
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
         
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Poker/">Poker
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/WalksProof/">Calculating the number of walks possible in a Manhattan Lattice
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Derangements/">Probably My Greatest Snippet of Code
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/Pi/">Estimating Pi
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+            
+                
             
                 
             
@@ -643,16 +717,11 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
-        
-            
-                
-            
                 
             
         
-    
-        
-        
+            
+                
             
                 
             
@@ -667,10 +736,6 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
-        
-            
-                
-            
                 
             
         
@@ -682,28 +747,6 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
-        
-            
-                
-            
-                
-            
-        
-    
-        
-        
-            
-                
-            
-                
-            
-        
-    
-        
-        
-            
-                
-            
                 
             
         
@@ -712,7 +755,11 @@ You may assume that the array is non-empty and the majority element always exist
             
                 
             
+                
+            
         
+            
+                
             
                 
             
@@ -720,6 +767,8 @@ You may assume that the array is non-empty and the majority element always exist
             
         
     
+    
+        </ul>
     
 </div>
 
@@ -744,7 +793,7 @@ You may assume that the array is non-empty and the majority element always exist
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=http://localhost:4000/BoyerMooreVotingAlgo/ - Boyer–Moore Majority Vote Algorithm by @"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/BayesTheorem/ - Bayesian Probability by @"
             >
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use></svg
@@ -761,11 +810,11 @@ You may assume that the array is non-empty and the majority element always exist
                 ><span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/BoyerMooreVotingAlgo/&amp;title=Boyer–Moore Majority Vote Algorithm&amp;summary=Pretty cool algorithm&amp;source=http://localhost:4000" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/BayesTheorem/&amp;title=Bayesian Probability&amp;summary=Probability is subjective??&amp;source=http://localhost:4000" target="_blank">
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
             </a> -->
 
-            <!-- <a class="reddit" href="https://reddit.com/submit?url=http://localhost:4000/BoyerMooreVotingAlgo/&amp;title=Boyer–Moore Majority Vote Algorithm" target="_blank">
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=http://localhost:4000/BayesTheorem/&amp;title=Bayesian Probability" target="_blank">
                 <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
             </a> -->
         </div>

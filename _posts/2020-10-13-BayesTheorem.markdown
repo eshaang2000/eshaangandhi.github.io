@@ -1,0 +1,21 @@
+---
+title: "Bayesian Probability"
+layout: post
+# date: <++>
+headerImage: false
+tag:
+- Probability
+- Math
+- Philosophy
+# star: true
+category: blog
+author: eshaan 
+description: Probability is subjective??
+---
+Is probability subjective? For example, let's say I flip a coin, and I ask you to guess how it landed. You say tails, and I show it to you as heads. We go again, and it heads also. We go again and again. We go 100 times, and it's heads every single time. Well, do you still believe that the next flip is going to be tails? Theoretically, it should be 1/2 or 50%, but is it? Even a six-year-old kid would catch on and say that there is a 100% chance that the next flip is going to be heads. On the other hand, a computer that is fundamentally objective is going to say that it is a 50% chance. Is she* right?? Hell no!
+
+Let's talk about sports? What does it mean that the Lakers have a 60% chance to win the NBA. Well, how do you quantify that? Do you count up all the points and rate them accordingly? Do you look at previous wins and come up with the number? Or is it just intuition? One of my friends said that every event is  50-50, it happens or it does not. I'm pretty sure that it was as a joke, but I unironically said that to a probability professor, and I got utterly flamed, so I refrain from making judgments.
+
+I would say that to test if someone's belief is true, one must be willing to bet if they were given odds according to the probability they gave us. If they are not, then you should probably not listen to them. I mean, definitely not listen to them. The likelihood of an event happening depends on the amount of information you have. For the same event, if you have a lot of info (likely not going to happen), you can arrive at a more precise probability. While if you have no information (most likely how things happen in life - like in poker), you will not be able to come up with a precise probability.
+
+Fascinating problem - how we can make the best decisions with limited information.
