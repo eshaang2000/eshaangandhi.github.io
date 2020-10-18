@@ -7,7 +7,7 @@ tag:
 - Probability
 - Math
 - Philosophy
-# star: true
+star: true
 category: blog
 author: eshaan 
 description: Probability is subjective??
