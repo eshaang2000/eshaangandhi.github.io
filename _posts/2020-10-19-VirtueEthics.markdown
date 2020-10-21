@@ -10,7 +10,7 @@ description: Discussion about Virtue Ethics and Eudaimonia
 ---
 # I <3 Aristotle
 
-![The Man Himself](Ethics/aristotle.jpg)
+![The Man Himself](aristotle.jpg)
 
 ## What is virtue ethics?
 
