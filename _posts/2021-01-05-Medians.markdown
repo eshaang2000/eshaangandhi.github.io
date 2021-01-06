@@ -1,0 +1,32 @@
+---
+title: "Algorithm to find the median in a stream of numbers"
+layout: post
+# date: <++>
+headerImage: false
+tag:
+- CS
+- Algorithms
+# star: true
+category: blog
+author: eshaan 
+description: Medians whenever, wherever
+---
+Problem Statement - Design an algorithm that will be able to find the median in a stream of numbers. In a nutshell, if there is a stream of numbers coming and you want to have the ability to be able to ask for the median whenever
+
+Approach - We can solve this problem using heaps (my favorite data structure.) What we do is we have two heaps, one min heap and one max heap. We will attempt to keep both of these balanced. 
+
+So moving forward, if the number in the stream is less than the root of the minHeap, we add it to the minHeap, otherwise we add it to the maxHeap. 
+
+after this step heaps will be either balanced or one of them will contain 1 more item
+
+We then have to balance the two heaps 
+
+If number of elements in one of the heaps is greater than the other by more than 1, remove the root element from the one containing more elements and add to the other one
+
+Now how do we find the median?
+If the heap contains equal number of elements:
+    median = (root of maxHeap + root of minHeap)/2
+else:
+    median = root of the heap with more elements
+
+Here we have it. 
