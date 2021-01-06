@@ -46,8 +46,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 <ul>
 	<li><a href="https://github.com/eshaang2000/Resume-Eshaan">LaTeX Resume Template</a></li>
 	<li><a href="https://github.com/eshaang2000/Rowing">Rowing Workout Analyzer</a></li> - Currently building
-	<li><a href="https://github.com/eshaang2000/BreastCancerClassification">Breast Cancer Classification Neural Net</a></<li><li><a href="https://github.com/eshaang2000/CS520/tree/master/Maze">Robot Maze Solver</a></li>
-	<li><li><a href="https://github.com/eshaang2000/CS520/tree/master/Minesweeper">Minesweeper AI</a></li>
-	<li><li><a href="https://github.com/eshaang2000/CS520/tree/master/Hunting">Probablistic Hunting</a></li>
-	<li><li><a href="https://github.com/eshaang2000/CS520/tree/master/Colorization">Color Black and White Images</a></li>
+	<li><a href="https://github.com/eshaang2000/BreastCancerClassification">Breast Cancer Classification Neural Net</a></<li>
+	<li><a href="https://github.com/eshaang2000/CS520/tree/master/Maze">Robot Maze Solver</a></li>
+	<li><a href="https://github.com/eshaang2000/CS520/tree/master/Minesweeper">Minesweeper AI</a></li>
+	<li><a href="https://github.com/eshaang2000/CS520/tree/master/Hunting">Probablistic Hunting</a></li>
+	<li><a href="https://github.com/eshaang2000/CS520/tree/master/Colorization">Color Black and White Images</a></li>
 </ul>
