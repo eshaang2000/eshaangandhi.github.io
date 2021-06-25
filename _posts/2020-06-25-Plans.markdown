@@ -1,0 +1,17 @@
+---
+title: "Plans"
+layout: post
+# date: <++>
+headerImage: false
+tag:
+- life
+# star: true
+category: blog
+author: eshaan 
+description: Future plans of the blog
+---
+It's been a while since I posted. That it going to change now though. Everyday I will post something new that I find interesting, math problems, brain teasers, CS stuff, Sports betting
+
+Right now I am working on a dashboard that will help in sports betting. Really excited for how that will turn out. Stay tuned. 
+
+Eshaan
