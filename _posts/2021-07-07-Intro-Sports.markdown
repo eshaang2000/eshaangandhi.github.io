@@ -9,7 +9,7 @@ tag:
 # star: true
 category: blog
 author: eshaan 
-description: An introduction to sports betting for people who have no idea what's going on. Note this post will not consist on any viable strategies
+description: An introduction to sports betting for people who have no idea what's going on. Note this post will not consist of any viable strategies
 ---
 Hi everyone, 
 
