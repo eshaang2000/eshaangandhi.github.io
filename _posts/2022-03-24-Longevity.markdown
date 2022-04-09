@@ -9,7 +9,7 @@ tag:
 # star: true
 category: blog
 author: eshaan 
-description: My experiences with Fitness in my life. My current path and future plans.
+description: My experiences with Fitness in my life.
 ---
 
 First, some housekeeping, it has become evident to me that no one reads these, which is fine. I obviously don't post enough, and I will try to post more. Even though this is my second time posting this, I think this time will be good.
